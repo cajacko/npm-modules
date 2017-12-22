@@ -8,6 +8,6 @@
  * As this is an index.js file you only need to specify the import path to the
  * component directory, instead of to index.js.
  */
-import Component from 'components/<%= componentName %>/<%= componentName %>.container';
+import Component from 'components/<%= componentName %>/<%= componentName %>.<%= indexImport %>';
 
 export default Component;

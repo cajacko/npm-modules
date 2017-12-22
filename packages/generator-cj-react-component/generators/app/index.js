@@ -91,6 +91,14 @@ module.exports = class extends Generator {
       templateData[name.toLowerCase()] = this.props.files.includes(name);
     });
 
+    if (templateData.container) {
+      templateData.indexImport = 'container';
+    } else if (templateData.component) {
+      templateData.indexImport = 'component';
+    } else {
+      templateData.indexImport = 'render';
+    }
+
     this.props.files.forEach((file) => {
       let templatePath;
       let destinationPath;

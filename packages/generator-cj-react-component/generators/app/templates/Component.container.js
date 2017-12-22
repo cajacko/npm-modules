@@ -32,12 +32,12 @@ import { exampleAction  } from 'actions/exampleActions';
  */
 const mapStateToProps = ({ propFromStore }, { propPassedToComponent }) => {
   // Transform props from the store here as necessary
-  const propToPass = propFromStore;
+  const propToPass = propFromStore[propPassedToComponent];
 
   return {
-    propToPass
+    propToPass,
   };
-}
+};
 
 /**
  * Pass functions as props to the component, which can dispatch actions to the
@@ -51,7 +51,8 @@ const mapStateToProps = ({ propFromStore }, { propPassedToComponent }) => {
  *                             component
  */
 const mapDispatchToProps = (dispatch, { propPassedToComponent }) => ({
-  action: (paramFromFuncCall) => dispatch(action(paramFromFuncCall, propPassedToComponent)),
+  action: paramFromFuncCall =>
+    dispatch(exampleAction(paramFromFuncCall, propPassedToComponent)),
 });
 
 // Connect the component to redux via "connect"<% if (!withRouter) { %>.<% } else { %> and with react router via

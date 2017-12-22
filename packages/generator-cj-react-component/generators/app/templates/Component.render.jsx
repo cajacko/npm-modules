@@ -36,8 +36,7 @@ class <%= componentName %> extends PureComponent {
           <button onChange={this.props.onChange}>{this.props.value}</button>
         </div>
       </section>
-    )
-    <% } %>
+    );<% } %>
   }
 }
 

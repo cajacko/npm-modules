@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import <%= componentName %> from 'components/<%= componentName %>/<%= componentName %>.render';<% if (helper) { %>
-import help from 'components/<%= componentName %>/helpers/helper';<% } %>
+import helper from 'components/<%= componentName %>/helpers/helper';<% } %>
 
 /**
  * Business logic for the <%= componentName %> component.
@@ -61,7 +61,7 @@ class <%= componentName %>Component extends PureComponent {
         prop1={this.props.prop1}
         prop2={this.props.prop2}
         value={this.state.value}
-        onChange=={this.onChange}
+        onChange={this.onChange}
       />
     );
   }
