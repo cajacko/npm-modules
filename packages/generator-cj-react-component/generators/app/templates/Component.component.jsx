@@ -6,9 +6,14 @@ import help from 'components/<%= componentName %>/helpers/helper';<% } %>
 /**
  * Business logic for the <%= componentName %> component.
  *
+ * Does not render any markup, as markup is only handled but a .render
+ * component. This helps to seperate the presentation logic from managing the
+ * state and actions. It also makes it easier to handle component updating and
+ * rerendering, improving performance.
+ *
  * TODO: EXPLAIN CUSTOM BEHAVIOUR HERE
  *
- * @extends Component
+ * @extends PureComponent
  */
 class <%= componentName %>Component extends PureComponent {
   /**
