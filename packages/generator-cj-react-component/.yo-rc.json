@@ -1,9 +1,0 @@
-{
-  "generator-node": {
-    "promptValues": {
-      "authorName": "Charlie Jackson",
-      "authorEmail": "contact@charliejackson.com",
-      "authorUrl": "https://charliejackson.com"
-    }
-  }
-}
