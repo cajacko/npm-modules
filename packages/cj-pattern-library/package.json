@@ -6,7 +6,8 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "docs": "build-storybook -c .storybook -o ../../docs",
     "build": "npx babel src --out-dir lib",
-    "prepublish": "yarn build"
+    "prepublish": "yarn build && yarn docs && git add ../../docs && git commit -m \"Updated docs\"",
+    "postpublish": "git push origin"
   },
   "main": "index.js",
   "author": "Charlie Jackson",
