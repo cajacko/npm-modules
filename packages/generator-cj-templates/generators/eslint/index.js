@@ -13,7 +13,7 @@ module.exports = class extends Generator {
         'eslint-plugin-jsx-a11y',
         'eslint-plugin-react',
       ],
-      { dev: true }
+      { dev: true, 'ignore-workspace-root-check': true }
     );
   }
 
@@ -37,10 +37,6 @@ module.exports = class extends Generator {
         {
           script: 'yarn test:lint',
           order: 1,
-        },
-        {
-          script: 'yarn test:woo',
-          order: 2,
         },
       ],
     });
