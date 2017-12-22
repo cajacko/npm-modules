@@ -2,8 +2,8 @@ const { pathExistsSync } = require('fs-extra');
 const { join } = require('path');
 
 const paths = [
-  'components',
   'src/components',
+  'components',
   '../components',
   '../../components',
   '../src/components',
