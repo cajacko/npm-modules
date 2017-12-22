@@ -6,7 +6,7 @@
 	],
 	"scripts": {
 		"postinstall": "cd packages/cj-cli && npm link",
-		"lerna": "lerna init --independent"
+		"lerna": "lerna publish"
 	},
 	"files": ["lib/**/*"],
 	"devDependencies": {
