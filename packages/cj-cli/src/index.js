@@ -13,4 +13,4 @@ delete options._;
 
 if (commands[command]) return commands[command](params, options);
 
-commands.unknownCommand(command, params, options);
+commands.unknownCommand(commands, command, params, options);
