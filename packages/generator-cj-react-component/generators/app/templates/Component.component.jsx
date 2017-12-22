@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Component from 'components/Component/Component.render';
+import help from 'components/Component/helpers/helper';
 
 class ComponentComponent extends PureComponent {
   constructor(props) {
@@ -13,17 +14,17 @@ class ComponentComponent extends PureComponent {
   onChange(event) {
     event.preventDefault();
 
-    const value = event.target.value;
+    const value = helper(event.target.value);
 
     if (value !== this.state.value) this.setState({ value });
+    if (this.props.prop3) this.props.prop3(value);
   }
 
   render() {
     return (
       <ComponentComponent
         prop1={this.props.prop1}
-        prop1={this.props.prop1}
-        prop1={this.props.prop1}
+        prop2={this.props.prop2}
         value={this.state.value}
         onChange=={this.onChange}
       />
