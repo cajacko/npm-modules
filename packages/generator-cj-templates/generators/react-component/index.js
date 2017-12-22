@@ -1,4 +1,3 @@
-'use strict';
 const Generator = require('yeoman-generator');
 const { join } = require('path');
 let findComponentDir = require('./helpers/findComponentDir');
@@ -32,7 +31,7 @@ module.exports = class extends Generator {
       {
         name: 'Tests',
         checked: false,
-      }
+      },
     ];
   }
 
@@ -46,8 +45,9 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'componentName',
         message: 'Component Name',
-        validate: (value) => value && value.length > 0 || 'Name must be provided',
-        filter: (value) => `${value.charAt(0).toUpperCase()}${value.slice(1)}`,
+        validate: value =>
+          (value && value.length > 0) || 'Name must be provided',
+        filter: value => `${value.charAt(0).toUpperCase()}${value.slice(1)}`,
       },
       {
         type: 'checkbox',
@@ -55,7 +55,11 @@ module.exports = class extends Generator {
         message: 'Files',
         store: true,
         validate: (value) => {
-          if (!value.includes('Container') && !value.includes('Component') && !value.includes('Render')) {
+          if (
+            !value.includes('Container') &&
+            !value.includes('Component') &&
+            !value.includes('Render')
+          ) {
             return 'Container, Component or Render must be selected';
           }
 
@@ -65,16 +69,18 @@ module.exports = class extends Generator {
       },
     ];
 
-    return this.prompt(prompts).then(props => {
+    return this.prompt(prompts).then((props) => {
       this.props = props;
 
       if (props.files.includes('Container')) {
-        return this.prompt([{
-          type: 'confirm',
-          name: 'withRouter',
-          message: 'Use React Router in container?',
-          default: false,
-        }]).then(({ withRouter }) => {
+        return this.prompt([
+          {
+            type: 'confirm',
+            name: 'withRouter',
+            message: 'Use React Router in container?',
+            default: false,
+          },
+        ]).then(({ withRouter }) => {
           this.props.withRouter = withRouter;
         });
       }
@@ -104,7 +110,7 @@ module.exports = class extends Generator {
       let destinationPath;
       let type;
 
-      switch(file) {
+      switch (file) {
         case 'Container':
         case 'Style':
           type = file.toLowerCase();
@@ -141,7 +147,7 @@ module.exports = class extends Generator {
         let destinationPath;
         let type;
 
-        switch(file) {
+        switch (file) {
           case 'Container':
             templatePath = 'Component.container.js';
             destinationPath = `${this.props.componentName}.container.js`;
