@@ -1,7 +1,6 @@
 'use strict';
 const Generator = require('yeoman-generator');
-const chalk = require('chalk');
-const yosay = require('yosay');
+const { join } = require('path');
 let findComponentDir = require('./helpers/findComponentDir');
 
 module.exports = class extends Generator {
@@ -73,11 +72,7 @@ module.exports = class extends Generator {
   writing() {
     this.fs.copy(
       this.templatePath('*'),
-      this.destinationPath()
+      join(this.findComponentDir, this.props.name)
     );
-  }
-
-  install() {
-    // this.installDependencies();
   }
 };
