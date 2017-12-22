@@ -44,8 +44,8 @@ module.exports = class extends Generator {
     const prompts = [
       {
         type: 'input',
-        name: 'name',
-        message: 'Name',
+        name: 'componentName',
+        message: 'Component Name',
         validate: (value) => value && value.length > 0 || 'Name must be provided',
         filter: (value) => `${value.charAt(0).toUpperCase()}${value.slice(1)}`,
       },
@@ -67,12 +67,25 @@ module.exports = class extends Generator {
 
     return this.prompt(prompts).then(props => {
       this.props = props;
+
+      if (props.files.includes('Container')) {
+        return this.prompt([{
+          type: 'confirm',
+          name: 'withRouter',
+          message: 'Use React Router in container?',
+          default: false,
+        }]).then(({ withRouter }) => {
+          this.props.withRouter = withRouter;
+        });
+      }
+
+      return Promise.resolve();
     });
   }
 
   writing() {
-    const componentDir = join(this.componentDir, this.props.name);
-    const templateData = { componentName: this.props.name };
+    const componentDir = join(this.componentDir, this.props.componentName);
+    const templateData = Object.assign({}, this.props);
 
     this.fileChoices.forEach(({ name }) => {
       templateData[name.toLowerCase()] = this.props.files.includes(name);
@@ -88,14 +101,14 @@ module.exports = class extends Generator {
         case 'Style':
           type = file.toLowerCase();
           templatePath = `Component.${type}.js`;
-          destinationPath = `${this.props.name}.${type}.js`;
+          destinationPath = `${this.props.componentName}.${type}.js`;
           break;
 
         case 'Component':
         case 'Render':
           type = file.toLowerCase();
           templatePath = `Component.${type}.jsx`;
-          destinationPath = `${this.props.name}.${type}.jsx`;
+          destinationPath = `${this.props.componentName}.${type}.jsx`;
           break;
 
         case 'Helper':
@@ -123,14 +136,14 @@ module.exports = class extends Generator {
         switch(file) {
           case 'Container':
             templatePath = 'Component.container.js';
-            destinationPath = `${this.props.name}.container.js`;
+            destinationPath = `${this.props.componentName}.container.js`;
             break;
 
           case 'Component':
           case 'Render':
             type = file.toLowerCase();
             templatePath = `Component.${type}.jsx`;
-            destinationPath = `${this.props.name}.${type}.jsx`;
+            destinationPath = `${this.props.componentName}.${type}.jsx`;
             break;
 
           case 'Helper':
