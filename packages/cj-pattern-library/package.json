@@ -1,0 +1,19 @@
+{
+  "name": "cj-pattern-library",
+  "version": "0.1.0",
+  "description": "Pattern library for Charlie Jackson's projects",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "main": "index.js",
+  "author": "Charlie Jackson",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.18"
+  }
+}

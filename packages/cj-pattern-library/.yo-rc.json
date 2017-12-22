@@ -1,0 +1,11 @@
+{
+  "generator-cj-react-component": {
+    "promptValues": {
+      "files": [
+        "Component",
+        "Render",
+        "Style"
+      ]
+    }
+  }
+}
