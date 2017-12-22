@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-module.exports = function(commands, command, params, argv) {
+module.exports = function (commands) {
   console.error(chalk.red('\nUnknown command. The following commands are supported:\n'));
 
   const validCommands = Object.assign({}, commands);
@@ -14,4 +14,4 @@ module.exports = function(commands, command, params, argv) {
   console.log('\n');
 
   throw new Error('Unknown command');
-}
+};

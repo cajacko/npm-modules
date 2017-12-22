@@ -4,5 +4,5 @@ const template = require('./template');
 module.exports = {
   unknownCommand,
   t: template,
-  template
-}
+  template,
+};

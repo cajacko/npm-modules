@@ -10,7 +10,8 @@ const params = argv._.slice(1);
 const options = Object.assign({}, argv);
 delete options._;
 
-
-if (commands[command]) return commands[command](params, options);
-
-commands.unknownCommand(commands, command, params, options);
+if (commands[command]) {
+  commands[command](params, options);
+} else {
+  commands.unknownCommand(commands, command, params, options);
+}

@@ -1,19 +1,35 @@
+const { join } = require('path');
+
 const generatorAlias = {
-  component: 'cj-react-component',
-  eslint: 'cj-eslint'
+  component: 'react-component',
+  eslint: 'eslint',
 };
 
-module.exports = function() {
+module.exports = function (command) {
   process.argv.splice(2);
 
-  process.argv.push('./node_modules/generator-cj-templates/generators/eslint/index.js');
+  let generator = command;
+  const aliasOf = generatorAlias[generator];
 
-  // const generator = process.argv[2];
-  // const aliasOf = generatorAlias[generator];
-  //
-  // if (generator && aliasOf) process.argv[2] = aliasOf;
+  if (generator && aliasOf) generator = aliasOf;
 
-  console.log(process.argv);
+  let localGenerator;
+  const isStandalone = false;
 
+  if (isStandalone) {
+    localGenerator = join(
+      __dirname,
+      '../../node_modules/generator-cj-templates/generators/eslint/index.js'
+    );
+  } else {
+    localGenerator = join(
+      __dirname,
+      `../../../generator-cj-templates/generators/${generator}/index.js`
+    );
+  }
+
+  process.argv.push(localGenerator);
+
+  // eslint-disable-next-line global-require
   require('yo/lib/cli');
-}
+};

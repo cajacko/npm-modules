@@ -3,6 +3,7 @@
     "airbnb"
   ],
   "rules": {
+    "func-names": "off",
     "no-warning-comments": ["error", { location: "anywhere"}],
     "no-console": "off",
     "comma-dangle": [

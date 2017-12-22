@@ -12,6 +12,7 @@
   "private": false,
   "dependencies": {
     "chalk": "^2.3.0",
+    "generator-cj-templates": "^0.1.1",
     "inquirer": "^4.0.1",
     "minimist": "^1.2.0",
     "yo": "^2.0.0"
