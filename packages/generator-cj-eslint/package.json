@@ -1,0 +1,24 @@
+{
+  "name": "generator-cj-eslint",
+  "version": "0.0.0",
+  "description": "Yeoman generator for setting up eslint",
+  "homepage": "",
+  "author": {
+    "name": "Charlie Jackson",
+    "email": "contact@charliejackson.com",
+    "url": "https://charliejackson.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^2.0.1"
+  },
+  "repository": "https://github.com/cajacko/npm-modules.git",
+  "license": "MIT"
+}

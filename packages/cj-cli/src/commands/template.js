@@ -1,5 +1,6 @@
 const generatorAlias = {
   component: 'cj-react-component',
+  eslint: 'cj-eslint'
 };
 
 module.exports = function() {
