@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Pattern library for Charlie Jackson's projects",
   "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build": "build-storybook -c .storybook -o .out"
   },
   "main": "index.js",
   "author": "Charlie Jackson",
