@@ -5,7 +5,7 @@ export const Container = styled.section`
   background: ${GREY};
 `;
 
-export const Div = styled.Div``;
+export const Div = styled.div``;
 
 export const Text = styled.span``;
 
