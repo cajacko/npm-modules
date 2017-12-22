@@ -1,0 +1,25 @@
+{
+  "name": "generator-cj-templates",
+  "version": "0.1.0",
+  "description": "Yeoman generator for Charlie Jackson",
+  "homepage": "",
+  "author": {
+    "name": "Charlie Jackson",
+    "email": "contact@charliejackson.com",
+    "url": "https://charliejackson.com"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "",
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "yeoman-generator": "^2.0.1"
+  },
+  "repository": "https://github.com/cajacko/npm-modules.git",
+  "license": "MIT"
+}

@@ -4,12 +4,16 @@ const generatorAlias = {
 };
 
 module.exports = function() {
-  process.argv.splice(2, 1);
+  process.argv.splice(2);
 
-  const generator = process.argv[2];
-  const aliasOf = generatorAlias[generator];
+  process.argv.push('./node_modules/generator-cj-templates/generators/eslint/index.js');
 
-  if (generator && aliasOf) process.argv[2] = aliasOf;
+  // const generator = process.argv[2];
+  // const aliasOf = generatorAlias[generator];
+  //
+  // if (generator && aliasOf) process.argv[2] = aliasOf;
+
+  console.log(process.argv);
 
   require('yo/lib/cli');
 }
