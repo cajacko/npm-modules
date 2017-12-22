@@ -74,7 +74,7 @@ TestComponent.propTypes = {
 
 // TODO: Delete as necessary
 TestComponent.defaultProps = {
-  prop2: false,
+  prop2: true,
   prop3: () => {},
 };
 

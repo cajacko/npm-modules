@@ -1,0 +1,13 @@
+{
+  "presets": ["es2015", "stage-2", "react"],
+  "plugins": [
+    "transform-react-jsx-source",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "extensions": [".js", ".jsx"]
+      }
+    ]
+  ]
+}
