@@ -1,21 +1,21 @@
 const Generator = require('../../helpers/Generator');
 
 module.exports = class extends Generator {
-  // configuring() {
-  //   this.yarnInstall(
-  //     [
-  //       'eslint',
-  //       'eslint-config-airbnb',
-  //       'eslint-import-resolver-babel-module',
-  //       'eslint-plugin-flowtype',
-  //       'eslint-plugin-import',
-  //       'eslint-plugin-jest',
-  //       'eslint-plugin-jsx-a11y',
-  //       'eslint-plugin-react',
-  //     ],
-  //     { dev: true }
-  //   );
-  // }
+  configuring() {
+    this.yarnInstall(
+      [
+        'eslint',
+        'eslint-config-airbnb',
+        'eslint-import-resolver-babel-module',
+        'eslint-plugin-flowtype',
+        'eslint-plugin-import',
+        'eslint-plugin-jest',
+        'eslint-plugin-jsx-a11y',
+        'eslint-plugin-react',
+      ],
+      { dev: true }
+    );
+  }
 
   writing() {
     console.log('writing');
