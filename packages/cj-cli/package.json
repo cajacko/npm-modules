@@ -1,6 +1,6 @@
 {
   "name": "cj-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Command line utility for Charlie Jackson",
   "main": "src/index.js",
   "bin": {

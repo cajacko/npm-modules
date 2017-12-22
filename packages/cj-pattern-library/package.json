@@ -1,6 +1,6 @@
 {
   "name": "cj-pattern-library",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pattern library for Charlie Jackson's projects",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
