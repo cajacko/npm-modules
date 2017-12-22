@@ -24,7 +24,7 @@ class Test extends PureComponent {
     return (
       <Container>
         <Div prop1={this.props.prop1}>
-          {this.props.prop2 && <Text>AAA</Text>}
+          {this.props.prop2 && <Text>Growl</Text>}
           <Button onChange={this.props.onChange}>{this.props.value}</Button>
         </Div>
       </Container>
