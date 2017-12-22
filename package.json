@@ -4,6 +4,9 @@
 	"workspaces": [
 		"packages/*"
 	],
+	"scripts": {
+		"postinstall": "cd packages/cj-cli && npm link"
+	},
 	"devDependencies": {
 		"babel-eslint": "^8.0.3",
 		"babel-jest": "^22.0.3",
