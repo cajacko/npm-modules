@@ -1,0 +1,16 @@
+{
+  "name": "cj-cli",
+  "version": "0.1.0",
+  "description": "Command line utility for Charlie Jackson",
+  "main": "index.js",
+  "bin": {
+    "cj": "index.js",
+    "cj-yo": "node_modules/yo/lib/cli.js"
+  },
+  "author": "Charlie Jackson",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "yo": "^2.0.0"
+  }
+}
