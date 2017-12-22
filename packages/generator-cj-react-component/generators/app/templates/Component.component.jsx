@@ -25,13 +25,17 @@ class <%= componentName %>Component extends PureComponent {
   constructor(props) {
     super(props);
 
+    // TODO: Delete as necessary
     this.onChange = this.onChange.bind(this);
 
+    // TODO: Delete/adjust necessary
     this.state = { value: '' };
   }
 
   /**
    * Example method
+   *
+   * TODO: Delete this method
    *
    * @param  {Event}     event Event from the action
    * @return {undefined}       No return value
@@ -69,6 +73,7 @@ class <%= componentName %>Component extends PureComponent {
   prop3: PropTypes.func,
 };
 
+// TODO: Delete as necessary
 <%= componentName %>Component.defaultProps = {
   prop2: false,
   prop3: () => {},

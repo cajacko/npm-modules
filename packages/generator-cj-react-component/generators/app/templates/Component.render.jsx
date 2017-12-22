@@ -48,6 +48,7 @@ class <%= componentName %> extends PureComponent {
   value: PropTypes.string.isRequired,
 };
 
+// TODO: Delete as necessary
 <%= componentName %>.defaultProps = {
   prop2: false,
 };
