@@ -4,8 +4,8 @@
  * need the full .container, .component and .render files.
  *
  * As this is an index.js file you only need to specify the import path to the
- * component directory, instead of to index.js. 
+ * component directory, instead of to index.js.
  */
-import Component from 'components/Component/Component.container';
+import Component from 'components/<%= componentName %>/<%= componentName %>.container';
 
 export default Component;

@@ -72,7 +72,7 @@ module.exports = class extends Generator {
 
   writing() {
     const componentDir = join(this.componentDir, this.props.name);
-    const templateData = {};
+    const templateData = { componentName: this.props.name };
 
     this.fileChoices.forEach(({ name }) => {
       templateData[name.toLowerCase()] = this.props.files.includes(name);
