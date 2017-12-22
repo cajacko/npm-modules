@@ -5,8 +5,10 @@
 		"packages/*"
 	],
 	"scripts": {
-		"postinstall": "cd packages/cj-cli && npm link"
+		"postinstall": "cd packages/cj-cli && npm link",
+		"lerna": "lerna init --independent"
 	},
+	"files": ["lib/**/*"],
 	"devDependencies": {
 		"babel-eslint": "^8.0.3",
 		"babel-jest": "^22.0.3",
