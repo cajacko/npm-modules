@@ -8,6 +8,8 @@ module.exports = class extends Generator {
 
     this.packageJson = new PackageJson(this);
 
-    this.composeWith(join(__dirname, '../generators/package-json/index.js'));
+    this.composeWith(join(__dirname, '../generators/package-json/index.js'), {
+      run: false,
+    });
   }
 };

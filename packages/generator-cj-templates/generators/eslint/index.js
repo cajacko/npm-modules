@@ -18,7 +18,6 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    console.log('writing');
     this.fs.copy(this.templatePath('.*'), this.destinationPath());
 
     this.fs.extendJSON(this.destinationPath('package.json'), {

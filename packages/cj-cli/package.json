@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "chalk": "^2.3.0",
+    "chalk": "^1.0.0",
     "generator-cj-templates": "^0.1.2",
     "inquirer": "^4.0.1",
     "minimist": "^1.2.0",

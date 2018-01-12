@@ -1,7 +1,7 @@
-import styled from 'helpers/styledComponents';
-import { GREY } from 'constants/colours';
+import styled from 'cj-pattern-library/lib/helpers/styledComponents';
+import { GREY } from 'cj-pattern-library/lib/constants/colours';
 
-export const Container = styled.section`
+export const Container = styled.div`
   background: ${GREY};
 `;
 

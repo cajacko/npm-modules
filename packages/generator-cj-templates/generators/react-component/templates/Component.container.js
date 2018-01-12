@@ -18,7 +18,7 @@
 import { connect } from 'react-redux';<% if (withRouter) { %>
 import { withRouter } from 'react-router-dom';<% } %>
 import <%= componentName %> from 'components/<%= componentName %>/<%= componentName %>.<%= component ? 'component' : 'render' %>';
-import { exampleAction  } from 'actions/exampleActions';
+// import { exampleAction  } from 'actions/exampleActions';
 
 /**
  * Get props from the redux store, transform/make use of them and then return
@@ -32,7 +32,7 @@ import { exampleAction  } from 'actions/exampleActions';
  */
 const mapStateToProps = ({ propFromStore }, { propPassedToComponent }) => {
   // Transform props from the store here as necessary
-  const propToPass = propFromStore[propPassedToComponent];
+  const propToPass = propFromStore && propFromStore[propPassedToComponent];
 
   return {
     propToPass,
@@ -51,8 +51,8 @@ const mapStateToProps = ({ propFromStore }, { propPassedToComponent }) => {
  *                             component
  */
 const mapDispatchToProps = (dispatch, { propPassedToComponent }) => ({
-  action: paramFromFuncCall =>
-    dispatch(exampleAction(paramFromFuncCall, propPassedToComponent)),
+  // action: paramFromFuncCall =>
+  //   dispatch(exampleAction(paramFromFuncCall, propPassedToComponent)),
 });
 
 // Connect the component to redux via "connect"<% if (!withRouter) { %>.<% } else { %> and with react router via

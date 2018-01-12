@@ -11,6 +11,7 @@ const customStyled = cloneDeep(styled);
   const Element = styled[element]`
     display: flex;
     border: 0;
+    flex-direction: column;
   `;
 
   customStyled[element] = Element.extend;
@@ -23,6 +24,7 @@ const customStyled = cloneDeep(styled);
     padding: 0;
     display: flex;
     border: 0;
+    flex-direction: column;
   `;
 
   customStyled[element] = Element.extend;
@@ -46,6 +48,7 @@ const customStyled = cloneDeep(styled);
 ].forEach((element) => {
   const Element = styled[element]`
     display: flex;
+    flex-direction: column;
   `;
 
   customStyled[element] = Element.extend;

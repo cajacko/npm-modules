@@ -1,0 +1,12 @@
+{
+  "name": "cj-create-react-app",
+  "version": "0.1.0",
+  "description": "Create react app",
+  "main": "src/index.js",
+  "bin": {
+    "cjcra": "src/index.js"
+  },
+  "author": "Charlie Jackson",
+  "license": "MIT",
+  "private": false
+}

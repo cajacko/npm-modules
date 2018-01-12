@@ -41,7 +41,7 @@ class <%= componentName %> extends PureComponent {
 }
 
 <%= componentName %>.propTypes = {
-  prop1: PropTypes.string.isRequired,
+  // prop1: PropTypes.string.isRequired,
   prop2: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired,

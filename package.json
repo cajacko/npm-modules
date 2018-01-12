@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "cd packages/cj-cli && npm link",
     "lerna": "lerna publish",
-    "test:lint": "eslint --ext .js --ext .jsx src",
+    "test:lint": "eslint --ext .js --ext .jsx packages",
     "test": "yarn test:lint"
   },
   "files": [
